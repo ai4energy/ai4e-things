@@ -13,9 +13,9 @@ services:
       - "8084:8084"
       - "18083:18083"
     # volumes:
-    #   - ./emqx_data:/opt/emqx/data
-    #   - ./emqx_log:/opt/emqx/log
-    #   - ./emqx_etc:/opt/emqx/etc
+    #   - ./deploy/emqx_data:/opt/emqx/data
+    #   - ./deploy/emqx_log:/opt/emqx/log
+    #   - ./deploy/emqx_etc:/opt/emqx/etc
     networks:
       ai4e_net:
         ipv4_address: 172.20.0.117
