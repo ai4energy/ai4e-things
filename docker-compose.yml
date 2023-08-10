@@ -1,0 +1,27 @@
+version: '3.2'
+
+services:
+
+  emqx:
+    image: emqx/emqx:5.1.4
+    container_name: ai4e_emqx
+    restart: always
+    ports:
+      - "1883:1883"
+      - "8883:8883"
+      - "8083:8083"
+      - "8084:8084"
+      - "18083:18083"
+    # volumes:
+    #   - ./emqx_data:/opt/emqx/data
+    #   - ./emqx_log:/opt/emqx/log
+    #   - ./emqx_etc:/opt/emqx/etc
+    networks:
+      ai4e_net:
+        ipv4_address: 172.20.0.117
+
+networks:
+  ai4e_net:
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
