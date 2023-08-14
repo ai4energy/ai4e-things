@@ -2,6 +2,18 @@ version: '3.2'
 
 services:
 
+  ai4e-things-postgres:
+    image: postgres:15.4
+    container_name: ai4e-things-postgres
+    environment:
+      POSTGRES_PASSWORD: dlgcdxlgjzdsys
+      POSTGRES_DB: ai4e-things-postgres
+      POSTGRES_USER: ai4e_things
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./deploy/data/postgres:/var/lib/postgresql/data
+
   ai4e-things-mariadb:
     image: mariadb:10.6.14
     container_name: ai4e-things-mariadb

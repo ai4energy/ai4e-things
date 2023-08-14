@@ -29,3 +29,4 @@ go.work
 *.iws
 *.iml
 *.ipr
+deploy/data
